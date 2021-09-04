@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Counter from './Counter';
-import CounterHooks from './CounterHooks'
+import CounterHooks  from './CounterHooks'
 
 export const ThemeContext = React.createContext()
 
