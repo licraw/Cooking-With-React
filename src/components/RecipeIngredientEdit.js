@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function RecipeIngredientEdit({ ingredient, handleIngredientChange }) {
+export default function RecipeIngredientEdit({ ingredient, handleIngredientChange, handleIngredientDelete }) {
     // const {
     //     ingredient,
     //     handleIngredientChange
@@ -24,7 +24,12 @@ export default function RecipeIngredientEdit({ ingredient, handleIngredientChang
             value={ingredient.amount}
             onInput={(e) => handleChanges({ amount: e.target.value })}
           />
-          <button className="btn btn--danger">&times;</button> 
+          <button 
+            className="btn btn--danger"
+            onClick={() => handleIngredientDelete(ingredient.id)}
+          >
+            &times;
+          </button> 
         </>
     )
 }
